@@ -70,9 +70,9 @@ const SignUp = () => {
     //cloudinary stuff
     console.log(newUserData);
     const dat = await axios
-      .post("http://localhost:5000/users", newUserData)
+      .post("https://edutube-server.herokuapp.com/users", newUserData)
       .then((res) =>
-        window.location.assign("http://localhost:3000/verification")
+            {window.location.assign("http://localhost:3000/verification");console.log(res)}
       )
       .catch((err) => console.log(err));
     console.log(dat);
