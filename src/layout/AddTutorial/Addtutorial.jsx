@@ -107,7 +107,7 @@ const Addtutorial = ({ videos, setvideos }) => {
 
     console.log(newUploadData);
     await axios
-      .post("http://localhost:5000/tutorials", newUploadData)
+      .post("https://edutube-server.herokuapp.com/tutorials", newUploadData)
       .then((response) => {
         console.log(response);
         newUploadData._id = response.data._id;

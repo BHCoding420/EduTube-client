@@ -9,7 +9,7 @@ const Homepage = () => {
 
   useEffect(() => {
     const data = axios
-      .get("http://localhost:5000/tutorials")
+      .get("https://edutube-server.herokuapp.com/tutorials")
       .then((response) => {
         console.log(response);
         setvideos(response.data.tutorials);
