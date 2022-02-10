@@ -33,7 +33,7 @@ const LogIn = () => {
     console.log("sub,ie");
     console.log(UserData);
     const dat = await axios
-      .post("http://localhost:5000/users/login", UserData)
+      .post("https://edutube-server.herokuapp.com/users/login", UserData)
       .then((res) => {
         console.log(res.data);
         window.localStorage.setItem("token", JSON.stringify(res.data));
