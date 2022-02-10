@@ -9,7 +9,7 @@ const ViewVid = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/tutorials/view/${fileId}`)
+      .get(`https://edutube-server.herokuapp.com/tutorials/view/${fileId}`)
       .then((res) => {
         console.log(res);
         setfile(res.data.tutorials[0]);
