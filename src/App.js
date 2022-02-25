@@ -10,7 +10,7 @@ import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Box w="100%" h="100vh" className="App" bg="blue.200">
+    <Box w="100vw" h="100vh" className="App" bg="blue.200">
       <Routes>
         <Route path="/" exact element={<Homepage />}></Route>
         <Route path="/register" exact element={<SignUp />}></Route>

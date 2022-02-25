@@ -9,7 +9,7 @@ const Homepage = () => {
 
   useEffect(() => {
     const data = axios
-      .get("https://edutube-server.herokuapp.com/tutorials")
+      .get(`${process.env.REACT_APP_API}tutorials`)
       .then((response) => {
         console.log(response);
         setvideos(response.data.tutorials);
@@ -40,28 +40,7 @@ const Homepage = () => {
           })}
         </Grid>
       ) : (
-        <HStack>
-          <Skeleton
-            startColor="pink.500"
-            endColor="orange.500"
-            height="2000px"
-          />
-          <Skeleton
-            startColor="pink.500"
-            endColor="orange.500"
-            height="2000px"
-          />
-          <Skeleton
-            startColor="pink.500"
-            endColor="orange.500"
-            height="2000px"
-          />
-          <Skeleton
-            startColor="pink.500"
-            endColor="orange.500"
-            height="2000px"
-          />
-        </HStack>
+        <Box>WAITING</Box>
       )}
     </Box>
   );

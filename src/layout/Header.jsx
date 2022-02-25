@@ -25,7 +25,7 @@ const Header = ({ videos, setvideos }) => {
   useEffect(() => {
     setUser(getCurrentUser());
     console.log("niohodi");
-    console.log(videos);
+    console.log(process.env);
     //console.log(getCurrentUser());
   }, []);
   const history = useNavigate();
@@ -38,7 +38,10 @@ const Header = ({ videos, setvideos }) => {
       <Box>
         <InputGroup>
           <InputLeftAddon children="Search" />
-          <Input width="500px" placeholder="enter search here..." />
+          <Input
+            width="800px"
+            placeholder="Searching Doesn't work yet,Don't bother"
+          />
         </InputGroup>
       </Box>
       <Spacer />

@@ -33,7 +33,7 @@ const LogIn = () => {
     console.log("sub,ie");
     console.log(UserData);
     const dat = await axios
-      .post("http://localhost:5000/users/login", UserData)
+      .post(`${process.env.REACT_APP_API}users/login`, UserData)
       .then((res) => {
         console.log(res.data);
         window.localStorage.setItem("token", JSON.stringify(res.data));
