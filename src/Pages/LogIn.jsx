@@ -33,7 +33,11 @@ const LogIn = () => {
     console.log("sub,ie");
     console.log(UserData);
     const dat = await axios
+<<<<<<< HEAD
       .post(`${process.env.REACT_APP_API}users/login`, UserData)
+=======
+      .post("https://edutube-server.herokuapp.com/users/login", UserData)
+>>>>>>> 1bc7a1cab97f32c9d78316e35db12abc057714a6
       .then((res) => {
         console.log(res.data);
         window.localStorage.setItem("token", JSON.stringify(res.data));
